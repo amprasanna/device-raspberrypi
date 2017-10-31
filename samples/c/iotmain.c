@@ -99,7 +99,7 @@ int main(int argc __attribute__((unused)),
 
 	if (isRegistered) {
 		syslog(LOG_INFO, "Running in Registered mode\n");
-		sprintf(msproxyUrl, "ssl://%s.messaging.internetofthings.ibmcloud.com:8883", configstr.org);
+		sprintf(msproxyUrl, "ssl://%s.messaging.staging.internetofthings.ibmcloud.com:8883", configstr.org);
 		if(strcmp(configstr.authmethod ,"token") != 0) {
 			syslog(LOG_ERR, "Detected that auth-method is not token. Currently other authentication mechanisms are not supported, IoT process will exit.");
 			syslog(LOG_INFO, "**** IoT Raspberry Pi Sample has ended ****");
